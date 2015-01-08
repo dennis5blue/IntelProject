@@ -5,7 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
-import org.omg.CORBA.INTERNAL;
+//import org.omg.CORBA.INTERNAL;
 
 public class Check_file {
 	public Check_file (){
@@ -19,6 +19,8 @@ public class Check_file {
 	    while ((line = br.readLine())!=null){
 	    	return Integer.valueOf(line);
 	    }
+	    fr.close();
+	    br.close();
 		}catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}catch (IOException e) {
